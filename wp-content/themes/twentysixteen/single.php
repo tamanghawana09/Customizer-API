@@ -9,9 +9,21 @@
 
 get_header(); ?>
 
+
+
+<?php
+// Get the URL of the uploaded image
+$custom_image = get_theme_mod('image', '');
+
+if (!empty($custom_image)) {
+    echo '<div class="custom-image"><img src="' . esc_url($custom_image) . '" alt="Custom Image" /></div>';
+}
+?>
+
+
 <div id="primary" class="content-area">
-	<main id="main" class="site-main">
-		<?php
+    <main id="main" class="site-main">
+        <?php
 		// Start the loop.
 		while ( have_posts() ) :
 			the_post();
@@ -51,9 +63,9 @@ get_header(); ?>
 		endwhile;
 		?>
 
-	</main><!-- .site-main -->
+    </main><!-- .site-main -->
 
-	<?php get_sidebar( 'content-bottom' ); ?>
+    <?php get_sidebar( 'content-bottom' ); ?>
 
 </div><!-- .content-area -->
 

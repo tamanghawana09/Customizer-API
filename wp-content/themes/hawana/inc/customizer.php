@@ -59,3 +59,4 @@ function hawana_customize_preview_js() {
 	wp_enqueue_script( 'hawana-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'hawana_customize_preview_js' );
+

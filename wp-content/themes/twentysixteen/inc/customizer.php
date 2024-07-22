@@ -90,18 +90,18 @@ if ( ! function_exists( 'twentysixteen_header_style' ) ) :
 
 		// If the header text has been hidden.
 		?>
-		<style type="text/css" id="twentysixteen-header-css">
-		.site-branding {
-			margin: 0 auto 0 0;
-		}
+<style type="text/css" id="twentysixteen-header-css">
+.site-branding {
+    margin: 0 auto 0 0;
+}
 
-		.site-branding .site-title,
-		.site-description {
-			clip: rect(1px, 1px, 1px, 1px);
-			position: absolute;
-		}
-		</style>
-		<?php
+.site-branding .site-title,
+.site-description {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+</style>
+<?php
 	}
 endif; // twentysixteen_header_style()
 
@@ -849,10 +849,10 @@ function twentysixteen_color_scheme_css_template() {
 		'border_color'          => '{{ data.border_color }}',
 	);
 	?>
-	<script type="text/html" id="tmpl-twentysixteen-color-scheme">
-		<?php echo twentysixteen_get_color_scheme_css( $colors ); ?>
-	</script>
-	<?php
+<script type="text/html" id="tmpl-twentysixteen-color-scheme">
+<?php echo twentysixteen_get_color_scheme_css( $colors ); ?>
+</script>
+<?php
 }
 add_action( 'customize_controls_print_footer_scripts', 'twentysixteen_color_scheme_css_template' );
 

@@ -11,6 +11,11 @@
 ?>
 
 		</div><!-- .site-content -->
+		<style>
+			footer{
+				background-color: <?php echo get_theme_mod('footer_bg_color','#fff');?>;
+			}
+		</style>
 
 		<footer id="colophon" class="site-footer">
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
