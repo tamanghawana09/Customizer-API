@@ -31,7 +31,8 @@ function activate_required_plugins() {
         'text-plugin/text-plugin.php',
         'footer-plugin/footer-plugin.php',
         'image-plugin/image-plugin.php',
-        'media_plugin/media_plugin.php'
+        'media_plugin/media_plugin.php',
+        'form-plugin/form-plugin.php',
     );
 
     foreach ($required_plugins as $plugin) {
