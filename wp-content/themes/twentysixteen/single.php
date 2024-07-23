@@ -20,7 +20,6 @@ if (!empty($custom_image)) {
 }
 ?>
 
-
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <?php

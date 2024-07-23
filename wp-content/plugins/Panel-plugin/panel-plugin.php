@@ -30,7 +30,8 @@ function activate_required_plugins() {
         'color-plugin/color-plugin.php',
         'text-plugin/text-plugin.php',
         'footer-plugin/footer-plugin.php',
-        'image-plugin/image-plugin.php'
+        'image-plugin/image-plugin.php',
+        'media_plugin/media_plugin.php'
     );
 
     foreach ($required_plugins as $plugin) {

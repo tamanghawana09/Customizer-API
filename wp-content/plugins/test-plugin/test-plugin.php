@@ -54,29 +54,4 @@ body {
 }
 add_action('wp_head', 'mytheme_customize_css');
 
-
-function menu_customizer_preview_nav_menu($setting) {
-    $menu_id = str_replace('nav_menu_', '', $setting->id);
-
-    add_filter('wp_get_nav_menu_items', function($items, $menu, $args) use ($menu_id, $setting) {
-        $preview_menu_id = $menu->term_id;
-
-        if ($menu_id == $preview_menu_id) {
-            $new_ids = $setting->post_value();
-            $new_items = [];
-            $i = 1;
-
-            foreach ($new_ids as $item_id) {
-                $item = wp_setup_nav_menu_item(get_post($item_id));
-                $item->menu_order = $i;
-                $new_items[] = $item;
-                $i++;
-            }
-            return $new_items;
-        } else {
-            return $items;
-        }
-    }, 10, 3);
-}
-add_action('customize_preview_nav_menu', 'menu_customizer_preview_nav_menu', 10, 2);
 ?>
